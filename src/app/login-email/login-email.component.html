@@ -1,0 +1,22 @@
+<div id="wrapper">
+    <section id="main">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Correo electronico</label>
+                <input type="email" class="form-control" #email required placeholder="Ingrese su correo electronico" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" #password required placeholder=" Ingrese su contraseña">
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="authService.login(email.value, password.value)">Iniciar sesión</button>
+            <br>
+            <a routerLink="/registroUsuario">Registrarse</a>
+        </form>
+    </section>
+    <footer id="footer">
+        <ul class="copyright">
+            <li><a href="https://www.facebook.com/fherneftali/">&copy; Fher Valenzuela</a></li>
+        </ul>
+    </footer>
+</div>
